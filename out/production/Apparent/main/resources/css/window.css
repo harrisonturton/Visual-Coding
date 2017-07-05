@@ -1,0 +1,27 @@
+.canvas {
+    -fx-background-color: WHITE;/*WHITESMOKE;/*#EBEBEB;*/
+}
+
+.cable {
+    -fx-stroke: CORAL;
+    -fx-stroke-width: 1.0;
+    -fx-fill: TRANSPARENT;
+}
+
+.cable_connected {
+    -fx-stroke-width: 2.0;
+}
+
+.cable_connected:hover {
+    -fx-opacity: 0.5;
+}
+
+.cable:focused {
+    -fx-stroke: CORAL;
+    -fx-stroke-width: 3.0;
+}
+
+.cable_connected:focused {
+    -fx-stroke: CORAL;
+    -fx-stroke-width: 3.0;
+}
