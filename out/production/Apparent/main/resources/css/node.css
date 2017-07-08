@@ -1,0 +1,45 @@
+.node {
+    -fx-border-radius: 15;
+    -fx-border-color: SILVER;
+    -fx-border-width: 0.5;
+
+    -fx-background-radius: 15;
+    -fx-background-color: WHITE;
+}
+
+.node:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0, 2); /* blur type, colour, radius, spread, offset x, offset y */
+    -fx-border-color: CORAL;
+    -fx-border-width: 1;
+
+    -fx-background-color: WHITE;
+}
+
+.connector {
+    -fx-fill: WHITE;
+
+    -fx-stroke: SILVER;
+    -fx-stroke-width: 0.5;
+}
+
+.connector:hover {
+    -fx-fill: CORAL;
+    -fx-opacity: 0.7;
+
+    -fx-stroke: CORAL;
+    -fx-stroke-width: 1.0;
+}
+
+.connector_connected {
+    -fx-fill: CORAL;
+    -fx-opacity: 1.0;
+
+    -fx-stroke: CORAL;
+    -fx-stroke-width: 0.5;
+}
+
+.cable {
+    -fx-stroke: PURPLE;
+    -fx-stroke-width: 1.0;
+    -fx-fill: TRANSPARENT;
+}
