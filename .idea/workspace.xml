@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/event/base/EventQueue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/event/base/interfaces/IEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/event/base/interfaces/IEventHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/event/events/IConnectionEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/event/handlers/SimpleEventHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/MutablePair.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/view/graph/connector/impl/SimpleConnector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/css/node.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/AConnector.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/ANode.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/SampleNode.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Apparent/main/java/controllers/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Apparent/main/resources/views/sample.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/event/ConnectionEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/event/interfaces/IConnectionEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/event/interfaces/IViewEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/observer/IViewObserver.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/connector/base/ConnectorGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/connector/base/ConnectorGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/connector/base/ConnectorTooltip.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/connector/base/ConnectorTooltip.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/connector/base/controller/AConnectorController.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/connector/base/controller/AConnectorController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/connector/base/interfaces/IConnector.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/connector/base/interfaces/IConnectorController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/connector/base/interfaces/IConnectorTooltip.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/connector/base/interfaces/IConnectorTooltip.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/ENodeType.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/ENodeType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/NodeFactory.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/NodeFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/NodeManager.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/NodeManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/controller/ANodeController.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/controller/ANodeController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/interfaces/IConnectorGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/interfaces/IConnectorGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/interfaces/IConnectorTooltip.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/interfaces/IConnectorTooltip.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/base/interfaces/INodeController.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/base/interfaces/INodeController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/view/nodes/node/impl/SampleNode.java" afterPath="$PROJECT_DIR$/src/main/java/view/graph/node/impl/SampleNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Apparent/main/java/Main.class" afterPath="$PROJECT_DIR$/out/production/Apparent/main/java/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Apparent/main/resources/css/window.css" afterPath="$PROJECT_DIR$/out/production/Apparent/main/resources/css/window.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/window/controllers/WindowController.java" afterPath="$PROJECT_DIR$/src/main/java/view/window/controllers/WindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/css/window.css" afterPath="$PROJECT_DIR$/src/main/resources/css/window.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/window.fxml" afterPath="$PROJECT_DIR$/src/main/resources/views/window.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1143,12 +1106,12 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1499165840139" duration="1901000" />
       <workItem from="1499168026141" duration="66000" />
-      <workItem from="1499168283976" duration="26855000" />
+      <workItem from="1499168283976" duration="27009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30124000" />
+    <option name="totallyTimeSpent" value="30278000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
