@@ -1,7 +1,7 @@
 package main.java.event.handlers;
 
-import main.java.event.base.interfaces.IEvent;
-import main.java.event.base.interfaces.IEventHandler;
+import main.java.event.events.IEvent;
+import main.java.event.events.IEventHandler;
 
 /**
  * Created by harrisonturton on 6/7/17.

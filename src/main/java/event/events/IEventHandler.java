@@ -1,4 +1,6 @@
-package main.java.event.base.interfaces;
+package main.java.event.events;
+
+import main.java.event.events.IEvent;
 
 /**
  * Created by harrisonturton on 6/7/17.

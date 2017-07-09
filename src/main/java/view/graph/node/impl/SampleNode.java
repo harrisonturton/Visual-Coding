@@ -17,17 +17,18 @@ public class SampleNode extends ANodeController {
     }
 
     public void setConnectors() {
-        System.out.println("Setting connectors ...");
-
-        for (int i = 0; i < 3; i++) {
-            AConnectorController connector = new SimpleConnector(this);
-            this.getChildren().add(connector);
-            connector.setCenterX(this.getWidth() + 10);
-            connector.setCenterY((this.getHeight() / 3) * i);
-        }
+        setIncomingConnectors();
+        setOutgoingConnectors();
     }
 
-    public void onActionTest() {
-        System.out.println("Clicked!");
+    public void setIncomingConnectors() {
+
+    }
+
+    public void setOutgoingConnectors() {
+        for (int i = 0; i < 3; i++) {
+            AConnectorController connector = new SimpleConnector(this);
+            connector.addToNode(this, ((((double) i) * 4.0) + 3.0) / (4.0 * 3.0));
+        }
     }
 }

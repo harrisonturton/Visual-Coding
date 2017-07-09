@@ -1,4 +1,4 @@
-package main.java.view.graph.node.base.interfaces;
+package main.java.view.graph.connector.base.interfaces;
 
 import main.java.view.graph.connector.base.ConnectorTooltip;
 

@@ -11,7 +11,7 @@ public class NodeFactory {
 
     private ANodeController node;
 
-    public void createNode(ENodeType type) {
+    public NodeFactory createNode(ENodeType type) {
         switch (type) {
             case SAMPLE:
                 this.node = createSampleNode(); // todo Set this.node using createSampleNode();
@@ -19,24 +19,15 @@ public class NodeFactory {
             default:
                 throw new IllegalArgumentException(String.format("Unknown ENodeType of type %s", type));
         }
-    }
 
-    public <T extends Pane> void addToScene(T parent) {
-        System.out.println(node.getWidth());
-
-        parent.getChildren().add(node);
-
-        System.out.println(node.getBoundsInLocal().getWidth());
-
-        System.out.println(node.getWidth());
-
-        node.setConnectors(); // must be called after adding to scene
+        return this;
     }
 
     private ANodeController genericLoadNode(ANodeController node) {
         node.setOuterView();
         node.setInnerView();
         node.setMovement();
+        node.setConnectors();
 
         return node;
     }
@@ -45,6 +36,10 @@ public class NodeFactory {
         SampleNode node = new SampleNode();
 
         return genericLoadNode(node);
+    }
+
+    public <T extends Pane> void addToScene(T parent) {
+        parent.getChildren().add(node);
     }
 
     public ANodeController getNode() {

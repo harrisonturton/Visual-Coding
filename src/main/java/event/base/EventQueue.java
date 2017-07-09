@@ -1,7 +1,7 @@
 package main.java.event.base;
 
-import main.java.event.base.interfaces.IEvent;
-import main.java.event.base.interfaces.IEventHandler;
+import main.java.event.events.IEvent;
+import main.java.event.events.IEventHandler;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -19,32 +19,32 @@ public class EventQueue {
     }
 
     public static void execute(IEvent event) {
-        Collection<IEventHandler> handlers = eventBindings.get(event);
+        Collection<IEventHandler> handlers = EventQueue.eventBindings.get(event);
         for (IEventHandler handler : handlers) {
             handler.execute(event);
         }
     }
 
     public static void registerHandler(IEvent event, IEventHandler handler) {
-        if (eventBindings.get(event).contains(handler)) {
+        if (EventQueue.eventBindings.get(event).contains(handler)) {
             throw new ArrayStoreException("EventHandler cannot be added, as it already exists.");
         }
 
-        Collection<IEventHandler> handlers = eventBindings.get(event);
+        Collection<IEventHandler> handlers = EventQueue.eventBindings.get(event);
         handlers.add(handler);
 
-        eventBindings.put(event, handlers);
+        EventQueue.eventBindings.put(event, handlers);
     }
 
     public static void unregisterHandler(IEvent event, IEventHandler handler) {
-        if (!eventBindings.get(event).contains(handler)) {
+        if (!EventQueue.eventBindings.get(event).contains(handler)) {
             throw new ArrayStoreException("EventHandler cannot be removed, as it doesn't exist.");
         }
 
 
-        Collection<IEventHandler> handlers = eventBindings.get(event);
+        Collection<IEventHandler> handlers = EventQueue.eventBindings.get(event);
         handlers.remove(handler);
 
-        eventBindings.put(event, handlers);
+        EventQueue.eventBindings.put(event, handlers);
     }
 }

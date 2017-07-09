@@ -1,6 +1,6 @@
 package main.java.view.graph.connector.base;
 
-import main.java.view.graph.node.base.interfaces.IConnectorGenerator;
+import main.java.view.graph.connector.base.interfaces.IConnectorGenerator;
 
 import java.util.List;
 

@@ -1,6 +1,5 @@
 package main.java.event.events;
 
-import main.java.event.base.interfaces.IEvent;
 import main.java.view.graph.node.base.controller.ANodeController;
 
 /**

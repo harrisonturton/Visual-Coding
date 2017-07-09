@@ -1,4 +1,4 @@
-package main.java.event.base.interfaces;
+package main.java.event.events;
 
 /**
  * Created by harrisonturton on 6/7/17.

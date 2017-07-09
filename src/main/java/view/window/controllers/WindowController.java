@@ -13,9 +13,6 @@ public class WindowController {
 
     public void add(ActionEvent actionEvent) {
         NodeFactory factory = new NodeFactory();
-        factory.createNode(ENodeType.SAMPLE);
-        factory.addToScene(canvas);
-
-        System.out.println("Added node");
+        factory.createNode(ENodeType.SAMPLE).addToScene(canvas);
     }
 }
