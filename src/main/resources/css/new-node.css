@@ -1,0 +1,74 @@
+.node {
+    -fx-background-radius: 2.5;
+    -fx-background-color: transperant;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0, 2); /* blur type, colour, radius, spread, offset x, offset y */
+}
+
+.cap {
+    -fx-background-radius: 2.5 2.5 0 0;
+    -fx-background-color: #3F8AC0;
+}
+
+.cup {
+    -fx-background-radius: 0 0 2.5 2.5;
+    -fx-background-color: #3F8AC0;
+}
+
+.left-connector {
+    -fx-background-radius: 2.5 0 0 2.5;
+    -fx-background-color: #3F8AC0;
+}
+
+.right-connector {
+    -fx-background-radius: 0 2.5 2.5 0;
+    -fx-background-color: #3F8AC0;
+}
+
+.title {
+    -fx-font-family: "Roboto";
+    -fx-font-weight: lighter;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.menu .label {
+    -fx-text-fill: WHITE;
+}
+
+.combo-box {
+    -fx-text-fill: WHITE;
+    -fx-background-color: #3F8AC0;
+    -fx-padding: 0;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: WHITE;
+    -fx-background-color: #3F8AC0;
+}
+
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+
+.menu {
+    -fx-text-fill: WHITE;
+    -fx-background-color: #3F8AC0;
+    -fx-text-fill: pink;
+    -fx-padding: 0;
+}
+
+.menu .arrow-button {
+    -fx-background-color: pink;
+    -fx-padding: 5px;
+    -fx-alignment: LEFT;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #3F8AC0;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+}

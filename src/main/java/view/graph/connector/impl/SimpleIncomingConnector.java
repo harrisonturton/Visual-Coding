@@ -1,6 +1,6 @@
 package main.java.view.graph.connector.impl;
 
-import main.java.view.graph.node.base.controller.ANodeController;
+import main.java.view.graph.node.node.base.controller.ANodeController;
 
 /**
  * Created by harrisonturton on 9/7/17.

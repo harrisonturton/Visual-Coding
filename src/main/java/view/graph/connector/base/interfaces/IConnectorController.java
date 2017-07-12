@@ -1,6 +1,6 @@
 package main.java.view.graph.connector.base.interfaces;
 
-import main.java.view.graph.node.base.interfaces.INodeController;
+import main.java.view.graph.node.node.base.interfaces.INodeController;
 
 /**
  * Created by harrisonturton on 5/7/17.

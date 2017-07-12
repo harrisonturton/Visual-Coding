@@ -1,7 +1,7 @@
-package main.java.event.base;
+package main.java.event;
 
-import main.java.event.events.IEvent;
-import main.java.event.events.IEventHandler;
+import main.java.event.events.base.IEvent;
+import main.java.event.handlers.base.IEventHandler;
 
 import java.util.Collection;
 import java.util.HashMap;

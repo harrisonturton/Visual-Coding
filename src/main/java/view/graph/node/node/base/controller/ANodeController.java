@@ -1,12 +1,11 @@
-package main.java.view.graph.node.base.controller;
+package main.java.view.graph.node.node.base.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import main.java.util.MutablePair;
-import main.java.view.graph.node.base.interfaces.INodeController;
+import main.java.view.graph.node.node.base.interfaces.INodeController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,9 +13,9 @@ import java.net.URL;
 /**
  * Created by harrisonturton on 4/7/17.
  */
-public abstract class ANodeController extends BorderPane implements INodeController {
+public abstract class ANodeController extends VBox implements INodeController {
 
-    private final String outerViewPath = "/main/resources/views/ANode.fxml";
+    private final String outerViewPath = "/main/resources/views/ANewNode.fxml";
     private boolean canDrag = true;
 
     @FXML
@@ -80,7 +79,7 @@ public abstract class ANodeController extends BorderPane implements INodeControl
 
     @Override
     public Node getInnerContainer() {
-        return this.childParent;
+        return this;
     }
 
     @Override

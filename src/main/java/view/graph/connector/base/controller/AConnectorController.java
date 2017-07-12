@@ -3,8 +3,8 @@ package main.java.view.graph.connector.base.controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.shape.Circle;
 import main.java.view.graph.connector.base.interfaces.IConnectorController;
-import main.java.view.graph.node.base.controller.ANodeController;
-import main.java.view.graph.node.base.interfaces.INodeController;
+import main.java.view.graph.node.node.base.controller.ANodeController;
+import main.java.view.graph.node.node.base.interfaces.INodeController;
 
 import java.io.IOException;
 import java.net.URL;

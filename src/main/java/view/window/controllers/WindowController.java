@@ -3,8 +3,8 @@ package main.java.view.window.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import main.java.view.graph.node.base.ENodeType;
-import main.java.view.graph.node.base.NodeFactory;
+import main.java.view.graph.node.node.base.ENodeType;
+import main.java.view.graph.node.node.NodeFactory;
 
 public class WindowController {
 

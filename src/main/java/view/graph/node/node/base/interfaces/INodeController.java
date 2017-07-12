@@ -1,4 +1,4 @@
-package main.java.view.graph.node.base.interfaces;
+package main.java.view.graph.node.node.base.interfaces;
 
 import javafx.scene.Node;
 

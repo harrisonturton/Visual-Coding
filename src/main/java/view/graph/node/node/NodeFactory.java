@@ -1,8 +1,9 @@
-package main.java.view.graph.node.base;
+package main.java.view.graph.node.node;
 
 import javafx.scene.layout.Pane;
-import main.java.view.graph.node.base.controller.ANodeController;
-import main.java.view.graph.node.impl.SampleNode;
+import main.java.view.graph.node.node.base.ENodeType;
+import main.java.view.graph.node.node.base.controller.ANodeController;
+import main.java.view.graph.node.node.impl.SampleNode.SampleNodeController;
 
 /**
  * Created by harrisonturton on 4/7/17.
@@ -33,7 +34,7 @@ public class NodeFactory {
     }
 
     private ANodeController createSampleNode() {
-        SampleNode node = new SampleNode();
+        SampleNodeController node = new SampleNodeController();
 
         return genericLoadNode(node);
     }

@@ -1,4 +1,4 @@
-package main.java.event.events;
+package main.java.event.events.base;
 
 /**
  * Created by harrisonturton on 6/7/17.

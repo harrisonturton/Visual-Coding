@@ -1,4 +1,4 @@
-package main.java.view.graph.node.base;
+package main.java.view.graph.node.node.base;
 
 /**
  * Created by harrisonturton on 5/7/17.
