@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<fx:root type="VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox>
+         <children>
+            <VBox alignment="CENTER_RIGHT" fillWidth="false" minHeight="20.0" minWidth="10.0" prefHeight="20.0" prefWidth="15.0">
+               <children>
+                  <Region minHeight="20.0" minWidth="10.0" styleClass="left-connector" VBox.vgrow="NEVER" />
+               </children>
+            </VBox>
+            <HBox styleClass="cup" HBox.hgrow="ALWAYS">
+               <children>
+                  <ComboBox minHeight="0.0" minWidth="50.0" prefWidth="100.0" promptText="number" />
+                  <TextField prefColumnCount="7" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="7.0" right="15.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" fillWidth="false" minHeight="20.0" minWidth="10.0" prefHeight="20.0" prefWidth="15.0">
+               <children>
+                  <Region minHeight="20.0" minWidth="10.0" styleClass="right-connector" VBox.vgrow="NEVER" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</fx:root>

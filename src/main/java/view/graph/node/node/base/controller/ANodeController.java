@@ -1,21 +1,17 @@
 package main.java.view.graph.node.node.base.controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 import main.java.util.MutablePair;
 import main.java.view.graph.node.node.base.interfaces.INodeController;
-
-import java.io.IOException;
-import java.net.URL;
+import main.java.view.util.Fxml;
 
 /**
  * Created by harrisonturton on 4/7/17.
  */
 public abstract class ANodeController extends VBox implements INodeController {
 
-    private final String outerViewPath = "/main/resources/views/ANewNode.fxml";
+    private final String outerViewPath = "/main/resources/views/VboxNode.fxml";
     private boolean canDrag = true;
 
     @FXML
@@ -23,32 +19,7 @@ public abstract class ANodeController extends VBox implements INodeController {
 
     // Load fixed template and child view
     public void setOuterView() {
-        URL outerPath = getClass().getResource(this.outerViewPath);
-
-        FXMLLoader outerLoader = new FXMLLoader(outerPath);
-        outerLoader.setRoot(this);
-        outerLoader.setController(this);
-
-        try {
-            // outerLoader must be loaded before innerLoader.
-            outerLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void setInnerView() {
-        URL innerPath = getClass().getResource(this.getInnerViewPath());
-
-        FXMLLoader innerLoader = new FXMLLoader(innerPath);
-        innerLoader.setController(this);
-        innerLoader.setRoot(this.getInnerContainer());
-
-        try {
-            innerLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Fxml.loadFxml(this, this.outerViewPath, this);
     }
 
     // Set drag handlers
@@ -76,10 +47,8 @@ public abstract class ANodeController extends VBox implements INodeController {
         });
     }
 
-
-    @Override
-    public Node getInnerContainer() {
-        return this;
+    public VBox getInnerContainer() {
+        return this.childParent;
     }
 
     @Override

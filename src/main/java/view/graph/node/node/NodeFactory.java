@@ -1,7 +1,7 @@
 package main.java.view.graph.node.node;
 
 import javafx.scene.layout.Pane;
-import main.java.view.graph.node.node.base.ENodeType;
+import main.java.view.graph.node.node.base.ENode;
 import main.java.view.graph.node.node.base.controller.ANodeController;
 import main.java.view.graph.node.node.impl.SampleNode.SampleNodeController;
 
@@ -12,7 +12,7 @@ public class NodeFactory {
 
     private ANodeController node;
 
-    public NodeFactory createNode(ENodeType type) {
+    public NodeFactory createNode(ENode type) {
         switch (type) {
             case SAMPLE:
                 this.node = createSampleNode(); // todo Set this.node using createSampleNode();
@@ -24,9 +24,18 @@ public class NodeFactory {
         return this;
     }
 
-    private ANodeController genericLoadNode(ANodeController node) {
+    public ANodeController genericLoadNode(ANodeController node) {
         node.setOuterView();
-        node.setInnerView();
+//        node.setInnerView();
+        node.setMovement();
+        node.setConnectors();
+
+        return node;
+    }
+
+    public ANodeController loadNodeBlock(ANodeController node) {
+        node.setOuterView();
+        node.setBlocks();
         node.setMovement();
         node.setConnectors();
 
@@ -36,7 +45,7 @@ public class NodeFactory {
     private ANodeController createSampleNode() {
         SampleNodeController node = new SampleNodeController();
 
-        return genericLoadNode(node);
+        return loadNodeBlock(node);
     }
 
     public <T extends Pane> void addToScene(T parent) {

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.shape.*?>
-
-<fx:root fx:id="connector" styleClass="connector" fill="WHITE" radius="7.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" type="Circle" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-</fx:root>

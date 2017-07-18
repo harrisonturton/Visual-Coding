@@ -1,7 +1,5 @@
 package main.java.view.graph.node.node.base.interfaces;
 
-import javafx.scene.Node;
-
 /**
  * Created by harrisonturton on 4/7/17.
  */
@@ -13,9 +11,9 @@ public interface INodeController {
     void setOuterView();
 
     /**
-     * Load the custom child view.
+     * Load the node blocks as children of outer view.
      */
-    void setInnerView();
+    void setBlocks();
 
     /**
      * Get the absolute path to the child view.
@@ -43,11 +41,11 @@ public interface INodeController {
      */
     void setCanDrag(boolean canDrag);
 
-    /**
-     * Get the JavaFx Node object to be the parent of the child view.
-     *
-     * @return
-     */
-    Node getInnerContainer();
+//    /**
+//     * Get the JavaFx Node object to be the parent of the child view.
+//     *
+//     * @return
+//     */
+//    <T extends Region> T getInnerContainer();
 
 }

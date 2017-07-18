@@ -1,6 +1,6 @@
 .node {
     -fx-background-radius: 2.5;
-    -fx-background-color: transperant;
+    -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0, 2); /* blur type, colour, radius, spread, offset x, offset y */
 }
