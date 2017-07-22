@@ -35,7 +35,6 @@ public class NodeFactory {
 
     public ANodeController loadNodeBlock(ANodeController node) {
         node.setOuterView();
-        node.setBlocks();
         node.setMovement();
         node.setConnectors();
 

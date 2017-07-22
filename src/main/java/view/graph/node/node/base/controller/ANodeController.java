@@ -3,7 +3,7 @@ package main.java.view.graph.node.node.base.controller;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 import main.java.util.MutablePair;
-import main.java.view.graph.node.node.base.interfaces.INodeController;
+import main.java.view.graph.node.node.base.ABlockFacade;
 import main.java.view.util.Fxml;
 
 /**
@@ -17,7 +17,17 @@ public abstract class ANodeController extends VBox implements INodeController {
     @FXML
     private VBox childParent;
 
-    // Load fixed template and child view
+    public ANodeController() {
+        setOuterView();
+        setMovement();
+        setConnectors();
+
+        this.getFacade().setBlocks(this.getBlocks());
+    }
+
+    protected abstract ABlockFacade getFacade();
+
+    // Load the wrapper VBox that holds the child Blocks
     public void setOuterView() {
         Fxml.loadFxml(this, this.outerViewPath, this);
     }
@@ -47,6 +57,7 @@ public abstract class ANodeController extends VBox implements INodeController {
         });
     }
 
+    // The FXML component that holds the child Blocks
     public VBox getInnerContainer() {
         return this.childParent;
     }

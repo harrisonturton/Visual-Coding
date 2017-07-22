@@ -5,14 +5,16 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0, 2); /* blur type, colour, radius, spread, offset x, offset y */
 }
 
+.block {
+    -fx-background-color: #3F8AC0;
+}
+
 .cap {
     -fx-background-radius: 2.5 2.5 0 0;
-    -fx-background-color: #3F8AC0;
 }
 
 .cup {
     -fx-background-radius: 0 0 2.5 2.5;
-    -fx-background-color: #3F8AC0;
 }
 
 .left-connector {

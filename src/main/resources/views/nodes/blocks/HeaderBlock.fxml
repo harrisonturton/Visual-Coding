@@ -9,7 +9,7 @@
    <children>
       <HBox>
          <children>
-            <HBox styleClass="cap" HBox.hgrow="ALWAYS">
+            <HBox fx:id="centerHbox" styleClass="block" HBox.hgrow="ALWAYS">
                <children>
                   <Label styleClass="title" text="variable">
                      <HBox.margin>

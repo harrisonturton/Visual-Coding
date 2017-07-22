@@ -1,47 +1,52 @@
 package main.java.view.graph.node.node.impl.SampleNode;
 
-import main.java.view.graph.node.blocks.Builder.BlockBuilder;
+import main.java.view.graph.node.blocks.base.INodeBlock;
+import main.java.view.graph.node.blocks.base.builder.BlockBuilder;
+import main.java.view.graph.node.blocks.impl.ButtonBlock;
 import main.java.view.graph.node.blocks.impl.HeaderBlock;
 import main.java.view.graph.node.blocks.impl.TypeValueBlock;
+import main.java.view.graph.node.node.base.ABlockFacade;
 import main.java.view.graph.node.node.base.controller.ANodeController;
+
+import java.util.List;
+
 
 /**
  * Created by harrisonturton on 4/7/17.
  */
 public class SampleNodeController extends ANodeController {
 
-    private final String innerViewPath = "/main/resources/views/nodes/blocks/HeaderBlock.fxml";
+    private List<INodeBlock> blocks;
+    private SampleNodeBlockFacade facade;
 
-    @Override
-    public String getInnerViewPath() {
-        return innerViewPath;
-    }
-
-
-    public void setBlocks() {
-        System.out.println("Setting blocks...");
+    public List<INodeBlock> getBlocks() {
         BlockBuilder builder = new BlockBuilder();
         builder.addBlock(new HeaderBlock())
-               .addBlock(new TypeValueBlock())
-               .setViews(this, this);
+                .addBlock(new TypeValueBlock())
+                .addBlock(new ButtonBlock())
+                .setViews(this);
 
-
-//        Fxml.loadFxml(this.getInnerContainer(), this.getInnerViewPath(), this);
-//        Fxml.loadFxml(this.getInnerContainer(), "/main/resources/views/TypeValueBlock.fxml", this);
+        return builder.getBlocks();
     }
+
+    public ABlockFacade getFacade() {
+        if (this.facade == null) {
+            this.facade = new SampleNodeBlockFacade();
+        }
+
+        return this.facade;
+    }
+
     public void setConnectors() {
         setIncomingConnectors();
         setOutgoingConnectors();
     }
 
-    public void setIncomingConnectors() {
-        System.out.println("Setting incoming connectors..."); // todo set Incoming connectors
+    private void setIncomingConnectors() {
+        System.out.println("Setting incoming connectors...");
     }
 
-    public void setOutgoingConnectors() {
-//        for (int i = 0; i < 3; i++) {
-//            AConnectorController connector = new SimpleConnector(this);
-//            connector.addToNode(this, ((((double) i) * 4.0) + 3.0) / (4.0 * 3.0));
-//        }
+    private void setOutgoingConnectors() {
+        System.out.println("Setting outgoing connectors...");
     }
 }

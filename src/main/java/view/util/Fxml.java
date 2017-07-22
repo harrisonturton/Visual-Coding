@@ -18,10 +18,6 @@ public class Fxml {
         loader.setController(controller);
         loader.setRoot(root);
 
-        System.out.println(url);
-        System.out.println(controller);
-        System.out.println(root);
-
         try {
             loader.load();
         } catch (IOException e) {

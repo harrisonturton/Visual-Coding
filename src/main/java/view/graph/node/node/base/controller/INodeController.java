@@ -1,4 +1,8 @@
-package main.java.view.graph.node.node.base.interfaces;
+package main.java.view.graph.node.node.base.controller;
+
+import main.java.view.graph.node.blocks.base.INodeBlock;
+
+import java.util.List;
 
 /**
  * Created by harrisonturton on 4/7/17.
@@ -6,20 +10,14 @@ package main.java.view.graph.node.node.base.interfaces;
 public interface INodeController {
 
     /**
-     * Load the standard SampleNode view.
+     * Load the wrapper view.
      */
     void setOuterView();
 
     /**
-     * Load the node blocks as children of outer view.
+     * Load the node blocks as children of the wrapper.
      */
-    void setBlocks();
-
-    /**
-     * Get the absolute path to the child view.
-     * @return
-     */
-    String getInnerViewPath();
+    List<INodeBlock> getBlocks();
 
     /**
      * Set the click & drag functionality.
@@ -40,12 +38,5 @@ public interface INodeController {
      * Set whether or not the Node can be dragged around.
      */
     void setCanDrag(boolean canDrag);
-
-//    /**
-//     * Get the JavaFx Node object to be the parent of the child view.
-//     *
-//     * @return
-//     */
-//    <T extends Region> T getInnerContainer();
 
 }
