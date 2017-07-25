@@ -11,13 +11,7 @@ public class WindowController {
     private AnchorPane canvas;
 
     public void add(ActionEvent actionEvent) {
-//        NodeFactory factory = new NodeFactory();
-//        factory.createNode(ENode.SAMPLE).addToScene(canvas);
-
         SampleNodeController node = new SampleNodeController();
-
-//        ConnectorController connector = new ConnectorController();
-//        connector.load();
 
         canvas.getChildren().add(node);
     }

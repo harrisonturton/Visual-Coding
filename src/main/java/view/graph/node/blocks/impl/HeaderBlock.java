@@ -2,6 +2,7 @@ package main.java.view.graph.node.blocks.impl;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.blocks.base.INodeBlock;
 
@@ -14,6 +15,13 @@ public class HeaderBlock extends ANodeBlock implements INodeBlock {
 
     @FXML
     private Label title;
+    private VBox leftConnectorParent;
+    private VBox rightConnectorParent;
+
+    @Override
+    public void setConnectors() {
+        System.out.println(this.getLeftConnectorParent());
+    }
 
     public void setDefaults() {
         this.title.setText("Example updated title");

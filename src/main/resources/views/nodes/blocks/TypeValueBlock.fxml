@@ -12,7 +12,7 @@
          <children>
             <VBox fx:id="leftConnectorParent" alignment="CENTER_RIGHT" fillWidth="false" minHeight="20.0" minWidth="10.0" prefHeight="20.0" prefWidth="15.0">
                <children>
-                  <Region minHeight="20.0" minWidth="10.0" styleClass="left-connector" VBox.vgrow="NEVER" />
+                  <!--<Region minHeight="20.0" minWidth="10.0" styleClass="left-connector" VBox.vgrow="NEVER" />-->
                </children>
             </VBox>
             <HBox fx:id="centerHbox" styleClass="block" HBox.hgrow="ALWAYS">
@@ -29,7 +29,7 @@
             </HBox>
             <VBox fx:id="rightConnectorParent" alignment="CENTER_LEFT" fillWidth="false" minHeight="20.0" minWidth="10.0" prefHeight="20.0" prefWidth="15.0">
                <children>
-                  <Region minHeight="20.0" minWidth="10.0" styleClass="right-connector" VBox.vgrow="NEVER" />
+                  <!--<Region minHeight="20.0" minWidth="10.0" styleClass="right-connector" VBox.vgrow="NEVER" />-->
                </children>
             </VBox>
          </children>

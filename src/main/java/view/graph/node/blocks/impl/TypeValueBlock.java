@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.blocks.base.INodeBlock;
+import main.java.view.graph.node.connector.ConnectorController;
 
 /**
  * Created by harrisonturton on 12/7/17.
@@ -18,6 +19,15 @@ public class TypeValueBlock extends ANodeBlock implements INodeBlock {
     private ComboBox combobox;
 
     @Override
+    public void setConnectors() {
+        ConnectorController left = new ConnectorController();
+        this.getLeftConnectorParent().getChildren().add(left);
+
+        ConnectorController right = new ConnectorController();
+        this.getRightConnectorParent().getChildren().add(right);
+    }
+
+    @Override
     public String getViewPath() {
         return this.viewPath;
     }
@@ -29,5 +39,4 @@ public class TypeValueBlock extends ANodeBlock implements INodeBlock {
     public ComboBox getCombobox() {
         return combobox;
     }
-
 }

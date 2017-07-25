@@ -17,4 +17,9 @@ public interface INodeBlock {
      * Load the FXML view and associated Connectors
      */
     <T extends Node> void setView(T root);
+
+    /**
+     * Load associated Connectors, if applicable.
+     */
+    void setConnectors();
 }
