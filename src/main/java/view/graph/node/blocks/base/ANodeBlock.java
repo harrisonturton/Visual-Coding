@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
+import main.java.view.graph.node.connector.ConnectorController;
 import main.java.view.util.Fxml;
 
 import java.net.URL;
@@ -20,7 +21,10 @@ public abstract class ANodeBlock implements INodeBlock, Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        System.out.println("left connector children " + leftConnectorParent.getChildren().size());
+        ConnectorController sample = new ConnectorController();
+        sample.load();
+
+        leftConnectorParent.getChildren().add(sample);
     }
 
     @Override

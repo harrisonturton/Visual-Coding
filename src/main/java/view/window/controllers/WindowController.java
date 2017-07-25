@@ -16,6 +16,9 @@ public class WindowController {
 
         SampleNodeController node = new SampleNodeController();
 
+//        ConnectorController connector = new ConnectorController();
+//        connector.load();
+
         canvas.getChildren().add(node);
     }
 }
