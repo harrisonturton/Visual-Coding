@@ -2,7 +2,6 @@ package main.java.view.graph.node.node.impl.SampleNode;
 
 import main.java.view.graph.node.blocks.base.INodeBlock;
 import main.java.view.graph.node.blocks.base.builder.BlockBuilder;
-import main.java.view.graph.node.blocks.impl.ButtonBlock;
 import main.java.view.graph.node.blocks.impl.HeaderBlock;
 import main.java.view.graph.node.blocks.impl.TypeValueBlock;
 import main.java.view.graph.node.node.base.ABlockFacade;
@@ -23,7 +22,6 @@ public class SampleNodeController extends ANodeController {
         BlockBuilder builder = new BlockBuilder();
         builder.addBlock(new HeaderBlock())
                 .addBlock(new TypeValueBlock())
-                .addBlock(new ButtonBlock())
                 .setViews(this);
 
         return builder.getBlocks();

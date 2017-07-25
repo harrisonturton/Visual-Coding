@@ -1,6 +1,5 @@
 package main.java.view.graph.node.node.impl.SampleNode;
 
-import main.java.view.graph.node.blocks.impl.ButtonBlock;
 import main.java.view.graph.node.blocks.impl.HeaderBlock;
 import main.java.view.graph.node.blocks.impl.TypeValueBlock;
 import main.java.view.graph.node.node.base.ABlockFacade;
@@ -16,9 +15,5 @@ public class SampleNodeBlockFacade extends ABlockFacade {
 
     public TypeValueBlock getTypeValueBlock() {
         return (TypeValueBlock) this.getBlocks().get(1);
-    }
-
-    public ButtonBlock getButtonBlock() {
-        return (ButtonBlock) this.getBlocks().get(2);
     }
 }

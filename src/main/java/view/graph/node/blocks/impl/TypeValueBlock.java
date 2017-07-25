@@ -3,12 +3,13 @@ package main.java.view.graph.node.blocks.impl;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.blocks.base.INodeBlock;
 
 /**
  * Created by harrisonturton on 12/7/17.
  */
-public class TypeValueBlock implements INodeBlock {
+public class TypeValueBlock extends ANodeBlock implements INodeBlock {
 
     private final String viewPath = "/main/resources/views/nodes/blocks/TypeValueBlock.fxml";
 
