@@ -12,7 +12,10 @@ public class WindowController {
 
     public void add(ActionEvent actionEvent) {
         SampleNodeController node = new SampleNodeController();
+        node.setSceneParent(canvas);
 
         canvas.getChildren().add(node);
+        node.getFacade().getTypeValueBlock().leftController.setHandlers();
+        node.getFacade().getTypeValueBlock().rightController.setHandlers();
     }
 }

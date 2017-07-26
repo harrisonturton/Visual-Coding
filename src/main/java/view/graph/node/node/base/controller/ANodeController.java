@@ -1,6 +1,7 @@
 package main.java.view.graph.node.node.base.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import main.java.util.MutablePair;
 import main.java.view.graph.node.node.base.ABlockFacade;
@@ -13,9 +14,9 @@ public abstract class ANodeController extends VBox implements INodeController {
 
     private final String outerViewPath = "/main/resources/views/VboxNode.fxml";
     private boolean canDrag = true;
+    private AnchorPane sceneParent;
 
-    @FXML
-    private VBox childParent;
+    @FXML private VBox childParent;
 
     public ANodeController() {
         setOuterView();
@@ -70,5 +71,13 @@ public abstract class ANodeController extends VBox implements INodeController {
     @Override
     public void setCanDrag(boolean canDrag) {
         this.canDrag = canDrag;
+    }
+
+    public AnchorPane getSceneParent() {
+        return sceneParent;
+    }
+
+    public void setSceneParent(AnchorPane sceneParent) {
+        this.sceneParent = sceneParent;
     }
 }

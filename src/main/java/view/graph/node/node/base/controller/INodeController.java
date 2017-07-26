@@ -1,6 +1,6 @@
 package main.java.view.graph.node.node.base.controller;
 
-import main.java.view.graph.node.blocks.base.INodeBlock;
+import main.java.view.graph.node.blocks.base.ANodeBlock;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public interface INodeController {
     /**
      * Load the node blocks as children of the wrapper.
      */
-    List<INodeBlock> getBlocks();
+    List<ANodeBlock> getBlocks();
 
     /**
      * Set the click & drag functionality.

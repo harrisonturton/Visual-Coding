@@ -1,7 +1,9 @@
 package main.java.view.graph.node.blocks.base.builder;
 
 import javafx.scene.layout.Pane;
+import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.blocks.base.INodeBlock;
+import main.java.view.graph.node.node.base.controller.ANodeController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +13,16 @@ import java.util.List;
  */
 public class BlockBuilder implements IBlockBuilder {
 
-    private List<INodeBlock> blocks = new ArrayList<>();
+    private ANodeController node;
+    private List<ANodeBlock> blocks = new ArrayList<>();
+
+    public BlockBuilder(ANodeController node) {
+        this.node = node;
+    }
 
     @Override
-    public IBlockBuilder addBlock(INodeBlock block) {
+    public IBlockBuilder addBlock(ANodeBlock block) {
+        block.setNode(node);
         this.blocks.add(block);
 
         return this;
@@ -24,38 +32,14 @@ public class BlockBuilder implements IBlockBuilder {
     public <T extends Pane> IBlockBuilder setViews(T root) {
         INodeBlock last = blocks.get(blocks.size() - 1);
 
-        for (int i = 0; i < blocks.size(); i++) {
-
-            blocks.get(i).setView(root);
-
-//            URL viewPath = root.getClass().getResource(blocks.get(i).getViewPath());
-//
-//            FXMLLoader loader = new FXMLLoader(viewPath);
-//            loader.setController(blocks.get(i));
-//            loader.setRoot(root);
-//
-//            try {
-//                loader.load();
-//
-//                if (i == 0) {
-//                    HBox hbox = (HBox) loader.getNamespace().get("centerHbox");
-//                    hbox.getStyleClass().add("cap");
-//                }
-//
-//                if (i == blocks.size() - 1) {
-//                    HBox hbox = (HBox) loader.getNamespace().get("centerHbox");
-//                    hbox.getStyleClass().add("cup");
-//                }
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
+        for (ANodeBlock block : blocks) {
+            block.setView(root);
         }
 
         return this;
     }
 
-    public List<INodeBlock> getBlocks() {
+    public List<ANodeBlock> getBlocks() {
         return this.blocks;
     }
 

@@ -22,9 +22,17 @@
     -fx-background-color: #3F8AC0;
 }
 
+.left-connector:hover {
+    -fx-background-color: coral;
+}
+
 .right-connector {
     -fx-background-radius: 0 2.5 2.5 0;
     -fx-background-color: #3F8AC0;
+}
+
+.right-connector:hover {
+    -fx-background-color: coral;
 }
 
 .title {
@@ -58,7 +66,7 @@
 .menu {
     -fx-text-fill: WHITE;
     -fx-background-color: #3F8AC0;
-    -fx-text-fill: pink;
+    -fx-text-fill: coral;
     -fx-padding: 0;
 }
 

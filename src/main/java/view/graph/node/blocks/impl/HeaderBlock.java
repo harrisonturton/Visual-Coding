@@ -20,7 +20,7 @@ public class HeaderBlock extends ANodeBlock implements INodeBlock {
 
     @Override
     public void setConnectors() {
-        System.out.println(this.getLeftConnectorParent());
+        // No connectors
     }
 
     public void setDefaults() {

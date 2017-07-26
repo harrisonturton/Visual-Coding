@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.blocks.base.INodeBlock;
 import main.java.view.graph.node.connector.ConnectorController;
+import main.java.view.graph.node.connector.EConnectorDir;
 
 /**
  * Created by harrisonturton on 12/7/17.
@@ -14,17 +15,26 @@ public class TypeValueBlock extends ANodeBlock implements INodeBlock {
 
     private final String viewPath = "/main/resources/views/nodes/blocks/TypeValueBlock.fxml";
 
-    @FXML
-    private TextField textfield;
-    private ComboBox combobox;
+    public ConnectorController leftController;
+    public ConnectorController rightController;
+
+    @FXML private TextField textfield;
+    @FXML private ComboBox combobox;
 
     @Override
     public void setConnectors() {
         ConnectorController left = new ConnectorController();
+        left.setBlock(this);
+        left.load(EConnectorDir.INCOMING);
         this.getLeftConnectorParent().getChildren().add(left);
 
         ConnectorController right = new ConnectorController();
+        right.setBlock(this);
+        right.load(EConnectorDir.OUTGOING);
         this.getRightConnectorParent().getChildren().add(right);
+
+        this.leftController = left;
+        this.rightController = right;
     }
 
     @Override

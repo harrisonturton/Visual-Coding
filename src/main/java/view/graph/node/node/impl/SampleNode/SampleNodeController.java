@@ -1,10 +1,10 @@
 package main.java.view.graph.node.node.impl.SampleNode;
 
+import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.blocks.base.INodeBlock;
 import main.java.view.graph.node.blocks.base.builder.BlockBuilder;
 import main.java.view.graph.node.blocks.impl.HeaderBlock;
 import main.java.view.graph.node.blocks.impl.TypeValueBlock;
-import main.java.view.graph.node.node.base.ABlockFacade;
 import main.java.view.graph.node.node.base.controller.ANodeController;
 
 import java.util.List;
@@ -18,8 +18,8 @@ public class SampleNodeController extends ANodeController {
     private List<INodeBlock> blocks;
     private SampleNodeBlockFacade facade;
 
-    public List<INodeBlock> getBlocks() {
-        BlockBuilder builder = new BlockBuilder();
+    public List<ANodeBlock> getBlocks() {
+        BlockBuilder builder = new BlockBuilder(this);
         builder.addBlock(new HeaderBlock())
                 .addBlock(new TypeValueBlock())
                 .setViews(this);
@@ -27,7 +27,7 @@ public class SampleNodeController extends ANodeController {
         return builder.getBlocks();
     }
 
-    public ABlockFacade getFacade() {
+    public SampleNodeBlockFacade getFacade() {
         if (this.facade == null) {
             this.facade = new SampleNodeBlockFacade();
         }

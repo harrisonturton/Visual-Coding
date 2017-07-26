@@ -1,6 +1,6 @@
 package main.java.view.graph.node.node.base;
 
-import main.java.view.graph.node.blocks.base.INodeBlock;
+import main.java.view.graph.node.blocks.base.ANodeBlock;
 
 import java.util.List;
 
@@ -9,13 +9,13 @@ import java.util.List;
  */
 public abstract class ABlockFacade {
 
-    private List<INodeBlock> blocks;
+    private List<ANodeBlock> blocks;
 
-    public void setBlocks(List<INodeBlock> blocks) {
+    public void setBlocks(List<ANodeBlock> blocks) {
         this.blocks = blocks;
     }
 
-    public List<INodeBlock> getBlocks() {
+    public List<ANodeBlock> getBlocks() {
         return blocks;
     }
 }
