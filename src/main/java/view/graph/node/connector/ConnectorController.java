@@ -1,7 +1,6 @@
 package main.java.view.graph.node.connector;
 
 import javafx.scene.layout.Region;
-import javafx.scene.shape.Line;
 import main.java.util.MutablePair;
 import main.java.view.graph.node.blocks.base.ANodeBlock;
 import main.java.view.graph.node.node.base.controller.ANodeController;
@@ -16,16 +15,16 @@ public class ConnectorController extends Region /*implements Initializable*/ {
 
     public void setHandlers() {
         MutablePair<Double, Double> delta = new MutablePair<>(0.0, 0.0);
-        Line line = new Line();
+        LinkCurve line = new LinkCurve(this);
+        line.bindToConnector();
+
         this.getBlock().getNode().getSceneParent().getChildren().add(line);
 
         this.getBlock().getNode().layoutXProperty().addListener(((observable, oldValue, newValue) -> {
-            line.setStartX((double) newValue);
             line.setEndX((double) newValue);
         }));
 
         this.getBlock().getNode().layoutYProperty().addListener(((observable, oldValue, newValue) -> {
-            line.setStartY((double) newValue);
             line.setEndY((double) newValue);
         }));
 

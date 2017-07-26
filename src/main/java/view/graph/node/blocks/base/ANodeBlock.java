@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 /**
  * Created by harrisonturton on 25/7/17.
  */
-public abstract class ANodeBlock implements INodeBlock, Initializable {
+public abstract class ANodeBlock extends VBox implements INodeBlock, Initializable {
 
     private ANodeController node;
 
